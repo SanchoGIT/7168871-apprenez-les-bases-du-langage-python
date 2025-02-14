@@ -29,6 +29,7 @@ for product in products:
 descriptions_list = []
 for product in products:
     # La description eest le dernier élément de la liste des paragraphes
+    name = product.find("h2").string
     description = product.find_all("p")[-1].string
     all_products[name]["description"] = description
 
